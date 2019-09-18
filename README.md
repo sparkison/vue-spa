@@ -1,6 +1,7 @@
 # Vue SPA
 
 An opinionated Vue SPA starter kit for web apps.
+![screenshot](https://github.com/sparkison/vue-spa/blob/master/screenshot.png?raw=true "Vue SPA screenshot")
 
 ## Dependencies
 `Node >= 10.x.x`
