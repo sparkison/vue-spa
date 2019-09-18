@@ -1,0 +1,37 @@
+body {
+  overflow-x: hidden;
+}
+
+// Gradient backgrounds
+.bg-gradient {
+  &.blue {
+    background: linear-gradient(to bottom right, lighten($primary, 15), $primary);
+  }
+  &.indigo {
+    background: linear-gradient(to bottom right, lighten($indigo, 15), $indigo);
+  }
+  &.purple {
+    background: linear-gradient(to bottom right, lighten($purple, 15), $purple);
+  }
+  &.pink {
+    background: linear-gradient(to bottom right, lighten($pink, 15), $pink);
+  }
+  &.red {
+    background: linear-gradient(to bottom right, lighten($red, 15), $red);
+  }
+  &.orange {
+    background: linear-gradient(to bottom right, lighten($orange, 15), $orange);
+  }
+  &.yellow {
+    background: linear-gradient(to bottom right, lighten($yellow, 15), $yellow);
+  }
+  &.green {
+    background: linear-gradient(to bottom right, lighten($green, 15), $green);
+  }
+  &.teal {
+    background: linear-gradient(to bottom right, lighten($teal, 15), $teal);
+  }
+  &.cyan {
+    background: linear-gradient(to bottom right, lighten($cyan, 15), $cyan);
+  }
+}

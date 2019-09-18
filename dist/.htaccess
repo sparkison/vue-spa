@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+
+    ## BEGIN Security ##
+    <IfModule mod_headers.c>
+            Header set X-XSS-Protection "1; mode=block"
+            Header always append X-Frame-Options SAMEORIGIN
+            Header set X-Content-Type-Options nosniff
+    </IfModule>
+    ## END Security ##
+
+    # HTTPS ##
+    <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteBase /
+            RewriteCond %{HTTPS} !=on
+            RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    </IfModule>
+    # HTTPS ##
+</IfModule>

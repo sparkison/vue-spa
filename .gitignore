@@ -1,0 +1,15 @@
+# Modules
+node_modules
+
+# Log files
+*.log
+
+# Mac files
+.DS_Store
+
+# Build files
+dist/js
+dist/css
+dist/precache-manifest.*.js
+dist/service-worker.js
+dist/resource-manifest.json

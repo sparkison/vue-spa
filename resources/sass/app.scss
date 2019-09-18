@@ -1,0 +1,30 @@
+// Mixins
+@import 'mixins';
+
+// Vendor
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/src/index.scss';
+@import "~flatpickr/dist/flatpickr.css";
+// @import "~flatpickr/dist/themes/material_blue.css";
+// @import "~vue-form-wizard/dist/vue-form-wizard.min.css"; // un-comment if using form wizard/stepper plugin
+// @import "~viewerjs/dist/viewer.css"; // un-comment if using lightbox plugin
+@import "~simplebar/dist/simplebar.css";
+
+// Bootstrap variables
+@import 'variables';
+
+// Overrides
+@import 'elements/overrides';
+
+// Elements
+@import 'elements/global';
+@import 'elements/adminbar';
+@import 'elements/swal';
+@import 'elements/loaders';
+@import 'elements/multiselect';
+@import 'elements/form';
+@import 'elements/card';
+@import 'elements/navbar';
+@import 'elements/buttons';
+@import 'elements/tooltips';
+@import 'elements/transitions';

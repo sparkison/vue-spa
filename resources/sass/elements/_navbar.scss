@@ -1,0 +1,187 @@
+/*
+ * Navbar
+ */
+.navbar {
+  font-weight: 600;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.08);
+
+  .logo {
+    height: 40px;
+    width: 80px;
+    overflow: hidden;
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+}
+
+.nav-profile-photo {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.nav-item {
+  .dropdown-menu {
+    border: none;
+    margin-top: .5rem;
+    border-top: 1px solid #f2f2f2 !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+  }
+}
+
+.nav-link {
+  .svg-inline--fa {
+    font-size: 1.4rem;
+  }
+}
+
+.profile-photo {
+  width: 2rem;
+  height: auto;
+  margin: -.375rem 0;
+}
+
+.notification-count {
+  position: absolute;
+  top: -0.25em;
+  right: -0.25em;
+  border: 2px solid white;
+}
+
+.nav-item .avatar  {
+  position: relative;
+  .is-admin,
+  .is-developer,
+  .is-super-user {
+    position: absolute;
+    top: -0.6rem;
+    right: 1.8rem;
+    > * {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  &:active, &:focus {
+    outline: none !important;
+  }}
+.hamburger:hover {
+  opacity: 0.7; }
+
+.hamburger-box {
+  width: 32px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 32px;
+  height: 4px;
+  background-color: $link-color;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; }
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; }
+.hamburger-inner::before {
+  top: -10px; }
+.hamburger-inner::after {
+  bottom: -10px; }
+
+/*
+ * primary
+ */
+.hamburger--primary {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: $primary;
+    &:hover, &:active, &:focus {
+      background-color: $link-color;
+    }
+  }
+}
+
+/*
+ * White
+ */
+.hamburger--white {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: $white;
+    &:hover, &:active, &:focus {
+      background-color: $link-color;
+    }
+  }
+}
+
+/*
+ * Spin
+ */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spin {
+  &[aria-expanded="true"], &.is-active {
+
+    .hamburger-inner {
+      transform: rotate(225deg);
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+}
+
+/*
+ * Arrow Turn
+ */
+.hamburger--arrowturn.is-active .hamburger-inner {
+  transform: rotate(-180deg); }
+.hamburger--arrowturn.is-active .hamburger-inner::before {
+  transform: translate3d(6px, 2px, 0) rotate(45deg) scale(0.7, 1); }
+.hamburger--arrowturn.is-active .hamburger-inner::after {
+  transform: translate3d(7px, -2px, 0) rotate(-45deg) scale(0.7, 1); }

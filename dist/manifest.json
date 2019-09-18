@@ -1,0 +1,22 @@
+{
+  "name": "CenturyLink TMI",
+  "short_name": "TMI",
+  "start_url": "/",
+  "orientation": "portrait",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3273dc",
+  "description": "CenturyLink TMI web application.",
+  "icons": [
+    {
+      "src": "./manifest/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./manifest/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

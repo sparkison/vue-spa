@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#3273dc">
+  <link rel="icon" sizes="192x192"
+        href="/manifest/android-chrome-192x192.png"/>
+
+  <title>Vue SPA</title>
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+<div id="app"></div>
+
+<noscript>
+  <h1>
+    This application requires Javascript to function.
+    Please enable Javascript and reload the application.
+  </h1>
+</noscript>
+
+<script>
+  window.config = {
+    "appName": "SPA",
+    "locale": "en",
+    "locales": {
+      "en": "EN"
+    }
+  }
+  window.user = {
+    "name": "Rick Sanchez",
+    "email": "rick.sanchez@dimenssionC137.com",
+    "avatar": "/img/sanchez.png",
+    "permissions": [
+      'view users',
+      'create users',
+      'update users',
+      'delete users'
+    ]
+  }
+</script>
+
+<script
+    src="//cdn.polyfill.io/v2/polyfill.min.js?features=Promise,Object.assign,Object.values,Array.prototype.find,Array.prototype.findIndex,Array.prototype.includes,String.prototype.includes,String.prototype.startsWith,String.prototype.endsWith"></script>
+<script src="/js/app.js"></script>
+
+<script>
+  (function () {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js')
+          .catch(function (error) {
+            console.error('error loading service worker', error)
+          })
+      })
+    }
+  })()
+</script>
+</body>
+</html>

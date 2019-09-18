@@ -1,0 +1,74 @@
+.help-block.invalid-feedback {
+  display: block !important;
+}
+
+label.required {
+  &:after {
+    display: inline-block;
+    content: "*";
+    color: $danger;
+  }
+}
+
+.form-control-file {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 6em;
+  outline: none;
+  visibility: hidden;
+  cursor: pointer;
+  background-color: #c61c23;
+  box-shadow: 0 0 5px solid currentColor;
+  &:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6em;
+    line-height: 2em;
+    padding-top: 1.5em;
+    opacity: 1;
+    visibility: visible;
+    text-align: center;
+    border: 0.25em dashed currentColor;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    overflow: hidden;
+    // border-radius: $border-radius-lg;
+  }
+  &:hover {
+    &:before {
+      border-style: solid;
+      box-shadow: inset 0 0 0 0.25em currentColor;
+    }
+  }
+}
+
+/* Form wizard component */
+.vue-form-wizard {
+
+  div[class^='wizard-progress'] {
+    display: none;
+  }
+
+  .wizard-navigation {
+    .wizard-nav {
+      flex-wrap: nowrap !important;
+      overflow-y: hidden;
+
+      white-space: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        padding: 0 10px;
+      }
+    }
+  }
+}
