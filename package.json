@@ -36,7 +36,7 @@
     "popper.js": "^1.14.3",
     "simplebar": "^4.0.0-alpha.9",
     "sweetalert": "^2.1.2",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "url-join": "^4.0.0",
     "v-click-outside": "^2.0.1",
     "v-tooltip": "^2.0.0-rc.33",
